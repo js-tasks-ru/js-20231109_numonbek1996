@@ -5,6 +5,12 @@
  * @param {number} n second number
  * @returns {number}
  */
-export const sum = (m, n) => {
-
+export const sum = (...args) => {
+  for (let num of args) {
+    if (!Number(num)) {
+      throw Error('INVALID_ARGUMENT_TYPE')
+    }
+  }
+  const initialValue = 0;
+  return args.reduce((acc, cur) => acc + cur, initialValue);
 };
