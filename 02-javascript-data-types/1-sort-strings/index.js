@@ -9,7 +9,7 @@ export function sortStrings(arr, param = 'asc') {
       asc: -1,
       desc: 1
     },
-    locale = ['ru', 'en'],
+    locale = ['ru-RU-u-kf-upper', 'en-US-u-kf-upper'],
     options = {caseFirst: 'upper'}
 
   return arr.sort((a, b) =>
