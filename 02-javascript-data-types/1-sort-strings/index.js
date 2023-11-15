@@ -6,13 +6,14 @@
  */
 export function sortStrings(arr, param = 'asc') {
   const sortBy = {
-      asc: -1,
-      desc: 1
+      asc: 1,
+      desc: -1
     },
     locale = ['ru-RU-u-kf-upper', 'en-US-u-kf-upper'],
-    options = {caseFirst: 'upper'}
+    options = {caseFirst: 'upper'},
+    sortedArray = [...arr]
 
-  return arr.sort((a, b) =>
-    (sortBy[param] || 1) * a.localeCompare(b, locale, options)
+  return sortedArray.sort((a, b) =>
+    [sortBy[param] || 1] * a.localeCompare(b, locale, options)
   )
 }
