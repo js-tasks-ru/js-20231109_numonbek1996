@@ -4,7 +4,7 @@
  * @param {...string} fields - the properties paths to omit
  * @returns {object} - returns the new object
  */
-const omit = (obj, ...fields) => {
+export const omit = (obj, ...fields) => {
   if (typeof obj !== 'object' || Object.keys(obj).length < 1) {
     throw new Error('INVALID_OBJECT')
   }
