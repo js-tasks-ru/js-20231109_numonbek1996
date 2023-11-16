@@ -13,7 +13,5 @@ export function sortStrings(arr, param = 'asc') {
     options = {caseFirst: 'upper'},
     sortedArray = [...arr]
 
-  return sortedArray.sort((a, b) =>
-    [sortBy[param] || 1] * a.localeCompare(b, locale, options)
-  )
+  return sortedArray.sort((a, b) => sortBy[param] * a.localeCompare(b, locale, options))
 }
